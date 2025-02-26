@@ -1,37 +1,31 @@
 import React from 'react';
+import { Button as AntButton } from 'antd';
 
 import './button.css';
 
 export interface ButtonProps {
-  /** Is this the principal call to action on the page? */
-  primary?: boolean;
+  type: "primary" | "dashed" | "text" | "link"
   /** What background color to use */
   backgroundColor?: string;
   /** How large should the button be? */
-  size?: 'small' | 'medium' | 'large';
+  size?: 'small' | 'middle' | 'large';
   /** Button contents */
-  label: string;
+  text: string;
   /** Optional click handler */
   onClick?: () => void;
 }
 
 /** Primary UI component for user interaction */
 export const Button = ({
-  primary = false,
-  size = 'medium',
-  backgroundColor,
-  label,
-  ...props
+  type,
+  size = 'middle',
+  text,
+  onClick,
 }: ButtonProps) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
   return (
-    <button
-      type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={{ backgroundColor }}
-      {...props}
-    >
-      {label}
-    </button>
+    <AntButton onClick={onClick} type={type} size={size}>
+      {text}
+    </AntButton>
+
   );
 };
