@@ -1,4 +1,3 @@
-import React from 'react';
 import { Button as AntButton } from 'antd';
 
 import './button.css';
@@ -26,6 +25,5 @@ export const Button = ({
     <AntButton onClick={onClick} type={type} size={size}>
       {text}
     </AntButton>
-
   );
 };

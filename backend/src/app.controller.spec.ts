@@ -11,5 +11,3 @@ describe('AppService', () => {
     expect(appService.getHello()).toBe('Hello World!'); // Если изменится, тест сломается
   });
 });
-
-
