@@ -3,7 +3,7 @@ import { Button as AntButton } from 'antd';
 import './button.css';
 
 export interface ButtonProps {
-  type: "primary" | "dashed" | "text" | "link"
+  type: 'primary' | 'dashed' | 'text' | 'link';
   /** What background color to use */
   backgroundColor?: string;
   /** How large should the button be? */
