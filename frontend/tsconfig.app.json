@@ -21,7 +21,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
-    "types": ["vite/client", "storybook__react"] // ← Добавьте это
+    "types": ["vite/client"] // ← Добавьте это
   },
   "include": ["src"]
 }
